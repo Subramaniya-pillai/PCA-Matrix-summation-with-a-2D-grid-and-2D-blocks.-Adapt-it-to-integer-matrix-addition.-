@@ -1,37 +1,33 @@
-PCA-Matrix-summation-with-a-2D-grid-and-2D-blocks.-Adapt-it-to-integer-matrix-addition.-
-Aim:
+# PCA-Matrix-summation-with-a-2D-grid-and-2D-blocks.-Adapt-it-to-integer-matrix-addition.-
+
+## Aim:
 To implement Matrix summation with 2D grids and blocks.
-
-Procedure:
-Step1:
+## Procedure:
+### Step1:
 Initialize matrix sizes (nx and ny)
-
-Step2:
+### Step2:
 Allocate memory on the host and initialize data.
-
-Step3:
+### Step3:
 Allocate memory on the device and transfer data from the host to the device.
-
-Step4:
+### Step4:
 configure grid and block dimensions for the GPU kernel.
-
-Step5:
+### Step5:
 Launch the GPU kernel (sumMatrixOnGPU2D) to perform matrix addition.
-
-Step6:
+### Step6:
 Copy the GPU results back to the host.
-
-Step7:
+### Step7:
 Verify and compare the results between the host and GPU.
-
-Step8:
+### Step8:
 Free allocated memory 9.Reset the GPU device.
 
-Program:
+## Program:
+
 > Developed by: Subramaniya Pillai B
 
 > Register Number: 212221230109
-Integer Matrix Addition:
+
+### Integer Matrix Addition:
+```python
 #include "common.h"
 #include <cuda_runtime.h>
 #include <stdio.h>
@@ -195,9 +191,10 @@ int main(int argc, char **argv)
     CHECK(cudaDeviceReset());
     return (0);
 }
-Output:
-Integer Matrix Addition:
-![git](./1.png)
+```
+## Output:
+### Integer Matrix Addition:
+![Alt text](./1.png)
 
 Matrix initialization : 6.338138 sec.
 
@@ -205,5 +202,5 @@ Sum matrix on Host : 0.884061 sec.
 
 Sum matrix on GPU2D : 0.012146 sec
 
-Result:
+## Result:
 Thus, matrix summation using 2D grids and 2D blocks has been performed successfully.
